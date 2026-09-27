@@ -1,13 +1,12 @@
-FROM eclipse-temurin:17-jdk
+FROM maven:3.9.9-eclipse-temurin-17
 
 WORKDIR /app
 
 COPY . .
 
-WORKDIR /app/backend/demo
+WORKDIR /app/stock-market-analysis-main/backend/demo
 
-RUN chmod +x mvnw
-RUN ./mvnw clean package -DskipTests
+RUN mvn package -DskipTests
 
 EXPOSE 8080
 
