@@ -1,11 +1,11 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/loginsignup_db
-    username: root
-    password: Onkar@11
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -19,8 +19,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${MAIL_USERNAME:anuj}
-    password: ${MAIL_PASSWORD:123}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
     properties:
       mail:
         smtp:
@@ -30,10 +30,10 @@ spring:
 
   security:
     user:
-      name: ${SECURITY_USERNAME:anuj}
-      password: ${SECURITY_PASSWORD:1234}
+      name: ${SECURITY_USERNAME}
+      password: ${SECURITY_PASSWORD}
 
 sambanova:
   api:
-    key: f000180f-9866-4578-a71d-f2998371b82c
-    base-url: https://claude.ai/chat/2039d179-fd1e-45c9-a376-e8356246a0b7
+    key: ${SAMBANOVA_API_KEY}
+    base-url: ${SAMBANOVA_BASE_URL}
