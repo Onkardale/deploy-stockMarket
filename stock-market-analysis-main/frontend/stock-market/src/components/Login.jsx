@@ -8,7 +8,7 @@ function Login({ setIsLoggedIn, setUserEmail }) {
 
   const login = async () => {
     try {
-      const res = await fetch("http://localhost:8080/api/auth/login", {
+      const res = await fetch("https://deploy-stockmarket-6.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
