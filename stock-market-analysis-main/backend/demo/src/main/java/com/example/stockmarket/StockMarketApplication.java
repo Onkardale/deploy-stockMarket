@@ -18,7 +18,7 @@ public class StockMarketApplication {
 	}
 	@GetMapping("/ok")
 	public String s1(){
-		return "Hello";
+		return "Hello java developers";
 	}
 
 
