@@ -68,7 +68,7 @@ function Login({ setIsLoggedIn, setUserEmail }) {
 const loginStyles = {
   page: {
     minHeight: "100vh",
-    background: "linear-gradient(135deg, #020617, #020617, #1e3a8a)",
+    background: "linear-gradient(135deg, #d9dced, #7c7f8d, #8c8e93)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
